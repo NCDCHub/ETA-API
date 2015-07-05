@@ -11,16 +11,24 @@ ETAのWebサービスAPIの仕様を定義します。
 
 ## URL
 
-https://<host>:<port>/<context root>/eta_request/<card number>
+`https://<host>:<port>/<context root>/eta_request/<card number>`
 
 ## 支援情報の取得
 
 ### リクエスト
 `GET` メソッド
 
-https://<host>:<port>/<context root>/eta_request/<card number>
+`https://<host>:<port>/<context root>/eta_request/<card number>`
 
 ### レスポンス
+HTTPレスポンスコードを見て結果を判定。
+- 200:成功
+- 500:サーバー側の内部エラー
+- 4xx:クライアントの引数エラー
+- 4xx:認証されていない
+- 404:該当のカード番号は登録されていない
+
+成功の場合のBody部として以下が返る。
 
 ```
 language:[AA, BB, CC, DD];
@@ -36,32 +44,47 @@ authority:{
 ```
 
 
-## 支援情報の取得
-
-### メソッド
-
-GET
+## 支援情報の登録
 
 ### リクエスト
 
+`PUT`メソッド
+
 ### レスポンス
-## 支援情報の取得
 
-### メソッド
+HTTPレスポンスコードを見て結果を判定。
+- 200:成功
+- 500:サーバー側の内部エラー
+- 4xx:クライアントの引数エラー
+- 4xx:認証されていない
+- 404:該当のカード番号は登録されていない
 
-GET
+## 支援情報の更新
 
 ### リクエスト
+`POST`メソッド
+
 
 ### レスポンス
+HTTPレスポンスコードを見て結果を判定。
+- 200:成功
+- 500:サーバー側の内部エラー
+- 4xx:クライアントの引数エラー
+- 4xx:認証されていない
+- 404:該当のカード番号は登録されていない
 
 ## 支援情報の削除
 
-### メソッド
-
-DELETE
-
 ### リクエスト
+`DELETE`メソッド
+
+`https://<host>:<port>/<context root>/eta_request/<card number>`
 
 ### レスポンス
-
+HTTPレスポンスコードを見て結果を判定。
+- 200:成功
+- 500:サーバー側の内部エラー
+- 4xx:クライアントの引数エラー
+- 4xx:認証されていない
+- 404:該当のカード番号は登録されていない
+- 
