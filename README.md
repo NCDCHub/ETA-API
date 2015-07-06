@@ -38,13 +38,13 @@ HTTPレスポンスコードを見て結果を判定。
 ```
 "language":["ja", "en", "fr", "de"];
 "タグ割付け機関及びカード所持者固有要件":{
-  "oid":"";
-  "request1":"";
-  "request2":"";
+  "oid":"",
+  "request1":"",
+  "request2":"",
   "request":[
     {"font_size":99},
     {"color":"aaa"}
-  ];
+  ]
 }
 ```
 
