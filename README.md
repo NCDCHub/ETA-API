@@ -36,16 +36,16 @@ HTTPレスポンスコードを見て結果を判定。
 成功の場合のBody部として以下が返る。
 
 ```
-language:[AA, BB, CC, DD];
-authority:{
-  oid:;
-  request1:;
-  request2:;
-  request;[
+"language":["ja", "en", "fr", "de"];
+"authority":{
+  "oid":"";
+  "request1":"";
+  "request2":"";
+  "request":[
+    {},
     {}
-    
-    ;
-  
+  ];
+}
 ```
 
 
