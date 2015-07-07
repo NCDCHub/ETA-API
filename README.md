@@ -36,15 +36,21 @@ HTTPレスポンスコードを見て結果を判定。
 成功の場合のBody部として以下が返る。
 
 ```
-"language":["ja", "en", "fr", "de"];
-"タグ割付け機関及びカード所持者固有要件":{
-  "oid":"",
-  "request1":"",
-  "request2":"",
-  "request":[
-    {"font_size":99},
-    {"color":"aaa"}
-  ]
+"GlobalUCI":{
+  "PreferredLanguage":["ja", "en", "fr", "de"],
+  "AutorityAndRequirements":{
+    "Autority":"OID",
+    "AutorityRequest1":{"font_size":99},
+    "AutorityRequest2":{"font_size":99},
+    "CardholderRequestIncludedFeature":{
+      {"font_size":99},
+      {"color":"aaa"}
+    },
+    "CardholderRequestExcludedFeature":{
+      {"font_size":99},
+      {"color":"aaa"}
+    }
+  }
 }
 ```
 
